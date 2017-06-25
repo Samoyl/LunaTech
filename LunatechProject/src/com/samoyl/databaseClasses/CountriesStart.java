@@ -1,9 +1,9 @@
 package com.samoyl.databaseClasses;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 import com.codoid.products.exception.FilloException;
 import com.codoid.products.fillo.Connection;
 import com.codoid.products.fillo.Fillo;
@@ -13,13 +13,15 @@ import com.samoyl.entities.Countries;
 
 public class CountriesStart {
 
-	public List<Countries> getAllCountries() throws FilloException, IOException {
-		
+	public List<Countries> getAllCountries() throws FilloException {
+
 		AirportStart airport = new AirportStart();
 		List<Airports> airports = airport.getAirports();
 		Fillo fillo = new Fillo();
 		Connection connection;
-		connection = fillo.getConnection("C:\\Users\\samoy\\git\\LocalLunatech\\LunatechProject\\Database\\countries.xlsx");
+		connection = fillo
+				.getConnection("C:\\Users\\samoy\\git\\LocalLunatech\\LunatechProject\\Database\\countries.xlsx");
+		// connection = fillo.getConnection(path);
 		Recordset recordset = connection.executeQuery("Select * from countries");
 		List<Countries> countries = new ArrayList<Countries>();
 		Countries country;

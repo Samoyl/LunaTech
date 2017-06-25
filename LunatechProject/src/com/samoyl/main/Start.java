@@ -1,6 +1,5 @@
 package com.samoyl.main;
 
-import java.io.IOException;
 import java.io.Serializable;
 import java.util.Collections;
 import java.util.Comparator;
@@ -32,12 +31,7 @@ public class Start implements Serializable {
 	static {
 		countryStart = new CountriesStart();
 		try {
-			try {
-				countries = countryStart.getAllCountries();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			countries = countryStart.getAllCountries();
 			Collections.sort(countries, new Comparator<Countries>() {
 				public int compare(Countries country1, Countries country2) {
 					return Integer.valueOf(country2.getAirportCount()).compareTo(country1.getAirportCount());
