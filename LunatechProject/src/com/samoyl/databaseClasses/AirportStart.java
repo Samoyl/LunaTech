@@ -13,11 +13,6 @@ import com.samoyl.entities.Runways;
 
 public class AirportStart {
 
-	public AirportStart() {
-
-		
-	}
-
 	public List<Airports> getAirports() {
 		RunwaysStart runway = new RunwaysStart();
 		List<Runways> runways = runway.getAllRunways();
