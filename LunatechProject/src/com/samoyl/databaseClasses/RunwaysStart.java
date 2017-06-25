@@ -16,7 +16,7 @@ public class RunwaysStart {
 		Fillo fillo = new Fillo();
 		Connection connection;
 		try {
-			connection = fillo.getConnection("C:/Users/samoy/workspace/LunatechProject/Database/runways.xlsx");
+			connection = fillo.getConnection("C:\\Users\\samoy\\git\\LocalLunatech\\LunatechProject\\Database\\runways.xlsx");
 			Recordset recordset = connection.executeQuery("Select * from runways");
 			while (recordset.next()) {
 				runway = new Runways();

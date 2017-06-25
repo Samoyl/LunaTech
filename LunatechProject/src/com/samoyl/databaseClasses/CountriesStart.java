@@ -19,7 +19,7 @@ public class CountriesStart {
 		List<Airports> airports = airport.getAirports();
 		Fillo fillo = new Fillo();
 		Connection connection;
-		connection = fillo.getConnection("C:/Users/samoy/workspace/LunatechProject/Database/countries.xlsx");
+		connection = fillo.getConnection("C:\\Users\\samoy\\git\\LocalLunatech\\LunatechProject\\Database\\countries.xlsx");
 		Recordset recordset = connection.executeQuery("Select * from countries");
 		List<Countries> countries = new ArrayList<Countries>();
 		Countries country;
